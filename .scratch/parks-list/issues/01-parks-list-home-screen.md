@@ -1,5 +1,5 @@
 ---
-Status: ready-for-agent
+Status: blocked
 ---
 
 # Parks list on home screen
@@ -27,3 +27,10 @@ Use RNEUI (`@rneui/themed`) components for the list. No custom UI primitives.
 ## Blocked by
 
 None — can start immediately.
+
+## Comments
+
+- Implementation is complete in the working tree: `src/app/index.tsx` renders the RNEUI parks list, and `src/features/parks/parkData.ts` contains the static Fort Wayne park data model and user location constant.
+- Verification completed: `bunx tsc --noEmit`, `TMPDIR=/private/tmp bunx expo export --platform web --output-dir /private/tmp/playpin-web-export`, `git diff --check`, and exported HTML text checks.
+- `bun run lint` is blocked because `expo lint` attempts to auto-install missing ESLint packages and Bun cannot write to its temp directory in this sandbox.
+- Commit is blocked because `.git` is not writable in this sandbox: `git add ...` fails with `fatal: Unable to create '/Users/austin/dev/playpin/.git/index.lock': Operation not permitted`.

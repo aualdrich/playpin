@@ -48,3 +48,22 @@ ralph_find_ready_issue() {
 
   return 1
 }
+
+ralph_issue_title() {
+  local file="$1"
+  local title
+
+  title="$(sed -n '1,20{
+    /^[[:space:]]*#/{
+      s/^[[:space:]]*#[[:space:]]*//
+      p
+      q
+    }
+  }' "$file")"
+
+  if [[ -n "$title" ]]; then
+    printf "%s\n" "$title"
+  else
+    basename "$file" .md
+  fi
+}

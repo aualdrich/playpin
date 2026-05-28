@@ -14,7 +14,7 @@ The work queue lives in `.scratch/<feature-slug>/issues`. The runner has selecte
 6. Run the relevant project checks. Prefer `bun` commands; this repo does not use `npm`.
 7. Do an internal code review of your own diff before finishing.
 8. If the issue is complete, change only the selected issue status from `Status: in-progress` to `Status: done`.
-9. Commit the completed issue with a descriptive commit message.
+9. Do not commit. The wrapper script creates the commit after this Codex run exits successfully.
 
 ## Blocked Work
 
@@ -27,6 +27,7 @@ If you cannot complete the issue safely, do not fake completion. Leave useful no
 - Use React Native Elements (`@rneui/themed`, `@rneui/base`) for UI.
 - Use `bun`, `bunx`, and repo scripts instead of `npm`.
 - Never commit directly to `main`.
+- Do not run `git add`, `git commit`, `git push`, or PR commands.
 - Do not push branches or open PRs from this loop.
 - Keep changes scoped to the selected issue.
 
@@ -37,4 +38,4 @@ At the end, report:
 - Selected issue path
 - Whether it is `done` or `blocked`
 - Verification commands run
-- Commit hash if committed
+- Any important notes for the wrapper-created commit
