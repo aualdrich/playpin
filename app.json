@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Playpin",
-    "slug": "Playpin",
+    "name": "playpin",
+    "slug": "playpin",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
