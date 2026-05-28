@@ -21,3 +21,17 @@ We use React Native Elements (`@rneui/themed`, `@rneui/base`) as our design syst
 # Package Manager
 
 Always use `bun` instead of `npm` for this project. Use `bun install`, `bunx`, etc.
+
+## Agent skills
+
+### Issue tracker
+
+Issues and PRDs live as local markdown files under `.scratch/<feature-slug>/`. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Default canonical label vocabulary (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context repo — one `CONTEXT.md` + `docs/adr/` at the repo root. See `docs/agents/domain.md`.
