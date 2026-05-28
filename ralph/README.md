@@ -38,7 +38,7 @@ ralph/run-once.sh <feature-slug>
 `run-once.sh` selects one ready issue and invokes:
 
 ```sh
-codex exec -C <repo-root> --sandbox workspace-write --ask-for-approval never
+codex --ask-for-approval never exec -C <repo-root> --sandbox workspace-write
 ```
 
 The prompt tells Codex to work only on the selected issue, update its status, verify the work, and commit completed changes.

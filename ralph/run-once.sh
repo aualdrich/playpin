@@ -35,8 +35,9 @@ echo "Selected issue: $RELATIVE_ISSUE"
   printf "\n## Selected Feature\n\n%s\n" "$FEATURE_SLUG"
   printf "\n## Selected Issue File\n\n%s\n" "$RELATIVE_ISSUE"
   printf "\nRead and implement only this issue file in this iteration.\n"
-} | codex exec \
+} | codex \
+  --ask-for-approval never \
+  exec \
   -C "$ROOT" \
   --sandbox workspace-write \
-  --ask-for-approval never \
   -
