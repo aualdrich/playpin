@@ -1,5 +1,5 @@
 ---
-Status: ready-for-agent
+Status: done
 ---
 
 # Distance and sorted order
